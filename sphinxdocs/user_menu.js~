@@ -1,0 +1,10 @@
+odoo.define('keidocs.UserMenu', function (require) {
+
+var web_usermenu = require('web.UserMenu');
+
+web_usermenu.include({
+    on_menu_userdocs: function() {
+        window.open('/keidocs/static/index.html', '_blank');
+    },
+    });
+});

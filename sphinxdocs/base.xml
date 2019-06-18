@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    
+<t t-extend="UserMenu.Actions">
+    <t t-jquery="a[data-menu='documentation']" t-operation="replace">
+        <a role="menuitem" href="#" data-menu="documentation" class="dropdown-item">Odoo Docs</a>    
+    </t> 
+    <t  t-jquery="a[data-menu='documentation']"  t-operation="after">
+            <a role="menuitem" href="#" data-menu="userdocs" class="dropdown-item">User Docs</a>
+    </t>  
+</t>    
+    
+</templates>

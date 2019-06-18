@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Glossary &mdash; XXX ERP 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="XXX ERP 1 documentation" href="index.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">XXX ERP 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="glossary">
+<span id="id1"></span><h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<dl class="glossary docutils">
+<dt id="term-administrator">administrator</dt>
+<dd>A special user created by default that has rights to configure and set access rights, so this user can create other users and set their access rights.</dd>
+<dt id="term-advance-product">advance product</dt>
+<dd>An artificial product created to be able to send advance invoices with a fixed amount (as opposed to a percentage). It is not really a product that you can buy or sell but it is used by the system to manage advance invoices. The advance invoice consists of just one invoice line with the advance product in quantity one and the advance amount as its price. When configuring the advance product make sure its type is &#8216;service&#8217; and its supply method is &#8216;produce&#8217;. Also you would set the income account of this product the account &#8216;Advances from customers&#8217; received instead of the default &#8216;Revenues&#8217; and remove the default tax on the product.</dd>
+<dt id="term-analytic-account">analytic account</dt>
+<dd>A management account on which money amounts and quantities can be accumulated in parallel to financial accounts. Each entry into the financial ledger can also be associated with an analytic account allowing data to be analyzed in different ways as from financial accounts alone. It is also possible to make entries onto an analytic account without a counterpart entry into the financial accounts.</dd>
+<dt id="term-analytic-journal">analytic journal</dt>
+<dd>Just like financial account entries need to be recorded through a (financial) journal, so need analytic entries be made through a analytic journal. It provides a means of categorizing the entries. If a financial entry gives rise to an analytic entry, the analytic journal set on the financial journal will be used.</dd>
+<dt id="term-anglo-saxon-accounting">anglo saxon accounting</dt>
+<dd>Can be set in the configuration of the accounting module. If set, the system recognizes the costs of goods sold when a sales invoice is confirmed when the <a class="reference internal" href="#term-inventory-valuation-method"><em class="xref std std-term">inventory valuation method</em></a> is Perpetual (automatic) and for products of <a class="reference internal" href="#term-product-type"><em class="xref std std-term">type</em></a> &#8216;Stockable Product&#8217;. When a supplier invoice is received for stockable products, costs are not booked on the <a class="reference internal" href="#term-expense-account"><em class="xref std std-term">expense account</em></a> but the <a class="reference internal" href="#term-stock-input-account"><em class="xref std std-term">stock input account</em></a> (this account then reflects the &#8216;goods to receive&#8217;) is debited instead for the product costs as recorded on the product form and price differences are recorded on the <a class="reference internal" href="#term-price-difference-account"><em class="xref std std-term">price difference account</em></a>. When goods are received the stock valuation account is debited and the stock input account is credited. At time of confirming the sales invoice, apart from the account entries to record the accounts receivable and sales revenue, there will also be accounting entries made to record the costs of goods sold by debiting the <a class="reference internal" href="#term-expense-account"><em class="xref std std-term">expense account</em></a> and crediting the <a class="reference internal" href="#term-stock-output-account"><em class="xref std std-term">stock output account</em></a> for the costs of goods to be delivered. Finally, when goods are delivered the <a class="reference internal" href="#term-stock-valuation-account"><em class="xref std std-term">stock valuation account</em></a> is credited and the <a class="reference internal" href="#term-stock-output-account"><em class="xref std std-term">stock output account</em></a> is debited.
+If anglo saxon accounting is not set the default <a class="reference internal" href="#term-continental-accounting"><em class="xref std std-term">continental accounting</em></a> applies.</dd>
+<dt id="term-application">application</dt>
+<dd>An application or “app” is a special type of module that is more comprehensive in nature and has its own top level menu item which is an icon on the menu screen. Regular modules extend one of the applications.</dd>
+<dt id="term-attribute">attribute</dt>
+<dd>see <a class="reference internal" href="#term-object"><em class="xref std std-term">object</em></a></dd>
+<dt id="term-back-order">back order</dt>
+<dd>a <a class="reference internal" href="#term-transfer"><em class="xref std std-term">transfer</em></a> created by the system for the part of the goods not available when validating a &#8216;partially available&#8217; transfer. The back order can then be validated at a later stage when some or all of the goods of the back order become available</dd>
+<dt id="term-bill-of-materials">bill of materials</dt>
+<dd>a bill of material (BOM) is an <a class="reference internal" href="#term-object"><em class="xref std std-term">object</em></a> that specifies the components of a manufactured product or a <a class="reference internal" href="#term-kit"><em class="xref std std-term">kit</em></a> product. A BOM has at least one BOM line. A <a class="reference internal" href="#term-procurement"><em class="xref std std-term">procurement</em></a> for a product with a Manufacture BOM (of the the type &#8216;Manufacture this product&#8217;) will create a <a class="reference internal" href="#term-manufacturing-order"><em class="xref std std-term">Manufacturing Order</em></a> in case there is not enough stock to satisfy the procurement and the  action of the associated procurement rule is &#8216;manufacture&#8217;. A procurement for a product with a Kit BOM (of type &#8216;Ship this product as a set of components (kit)&#8217;) never creates a manufacturing order but when a stock move is confirmed for such a product it will be exploded to all the individual products of its BOM lines. A Kit BOM is useful to group sets of components on a manufacture BOM so the manufacture BOM is easier to understand. It can also be used for selling kits to customers so the sales order remains simple with just one line per kit product but the delivery order is detailed listing all the individual products of the kit.</dd>
+<dt id="term-consumable">consumable</dt>
+<dd>see <a class="reference internal" href="#term-product-type"><em class="xref std std-term">product type</em></a></dd>
+<dt id="term-contact">contact</dt>
+<dd>A person associated with a partner.</dd>
+<dt id="term-continental-accounting">continental accounting</dt>
+<dd>Under the default &#8216;Continental&#8217; accounting system the costs of goods are recognized on the <a class="reference internal" href="#term-expense-account"><em class="xref std std-term">expense account</em></a> (often called  &#8216;Purchased Goods&#8217;) when the vendor bill is confirmed and then corrected for goods received and shipped by indicating the same account as the <a class="reference internal" href="#term-stock-input-account"><em class="xref std std-term">stock input account</em></a> and the <a class="reference internal" href="#term-stock-output-account"><em class="xref std std-term">stock output account</em></a> (this account is often called the &#8216;Inventory Variations&#8217;).
+When a vendor bill is confirmed the value is debited  on the <a class="reference internal" href="#term-expense-account"><em class="xref std std-term">expense account</em></a> and accounts payable is credited. When stockable products are received and the <a class="reference internal" href="#term-inventory-valuation-method"><em class="xref std std-term">inventory valuation method</em></a> is set to &#8216;Perpetual (automatic)&#8217; accounting entries will made to debit the <a class="reference internal" href="#term-stock-valuation-account"><em class="xref std std-term">stock valuation account</em></a> and credit the  <a class="reference internal" href="#term-stock-input-account"><em class="xref std std-term">stock input account</em></a>. When goods are shipped the <a class="reference internal" href="#term-stock-output-account"><em class="xref std std-term">stock output account</em></a> is debited and the <a class="reference internal" href="#term-stock-valuation-account"><em class="xref std std-term">stock valuation account</em></a> is debited. When a customer invoice is confirmed no stock valuation entries are made or expenses recognized. The cost of goods sold at the end of the period is then difference between the &#8216;Purchased Goods&#8217; and &#8216;Inventory Variations&#8217; account.</dd>
+<dt id="term-company-currency">company currency</dt>
+<dd>The currency of the financial statements of the company. Usually therefore the currency of the country the company is registered, so for PTS it is Chinese Yuan (CNY). The company currency is set on the company in Settings→Companies→Companies in the configuration tab of the company opened in form view. All accounting entries are in the company currency. If a different currency is used while making the entry then the amount is translated into the company currency at the most recent rate known to the system (the amount in foreign currency as well as the currency used is also stored with the entry).</dd>
+<dt id="term-costing-method">costing method</dt>
+<dd><p class="first">The costing methods available can be configured in the purchasing module. Once configured as &#8220;Use a &#8216;Fixed&#8217;,&#8217;Real&#8217; or &#8216;Average&#8217; price costing method&#8217; on the product category the Costing Method field is visible and can be set to one of the following three values:</p>
+<ul class="last simple">
+<li>Standard: A fixed cost price is manually entered by the user on the product form (this is the default and also the method that always applies if the option &#8216;Set a fixed cost price on each product&#8217; has been configured in the purchasing module).</li>
+<li>Average: The cost price is an average price of all purchased goods and recomputed with each incoming shipment.</li>
+<li>Real: The cost price displayed is the one of the last outgoing product. This should only be used with manufactured goods.</li>
+</ul>
+</dd>
+<dt id="term-customer-lead-time">customer lead time</dt>
+<dd>This is the time in number of days between confirming the sales order and the scheduling of the delivery order or the performance of the task. Is time within goods are delivered or services rendered you promised to customer.</dd>
+<dt id="term-database-id">database id</dt>
+<dd>Odoo automatically assigns to each record in the database a internal unique identification number called the database ID or simply the ID. The ID is a for the object (table) an unique integer number, which is used internally to refer to to the record. In the web client you can see the ID in the URL when a individual record is displayed, in the GTK client you can see the ID of a resource between brackets at the bottom of the page in form or list view.</dd>
+<dt id="term-developer-mode">developer mode</dt>
+<dd>The developer mode can be activated in the dashboard screen of the Settings module to activate more advanced or technical functionality. The developer mode also shows technical data about the objects being accessed and is useful when debugging the system or looking up the internal names of the objects when say developing a new report. You can also perform certain operations like setting defaults, defining custom filters and so on normally not available.</dd>
+<dt id="term-domain">domain</dt>
+<dd>An expression specifying a subset of records of an active set. It works like a search &#8216;filter&#8217;. Only records that match the filter are selected to be part of the subset. The difference is that domains are set in actions or on fields and cannot be changed in the view itself whereas search filters can be changed.</dd>
+<dt id="term-expense-account">expense account</dt>
+<dd>A <a class="reference internal" href="#term-property-field"><em class="xref std std-term">property field</em></a> that can be set both on the product and the product category. Normally this account is debited when a vendor bill for this product is confirmed at the cost price in the product form. It should therefore point to some expense account. If not set the default debit account of the journal of the vendor bill is used.
+Under the <a class="reference internal" href="#term-anglo-saxon-accounting"><em class="xref std std-term">anglo saxon accounting</em></a> system, for Stockable Products, however, not this account is debited, but instead the <a class="reference internal" href="#term-stock-input-account"><em class="xref std std-term">stock input account</em></a> (normally &#8216;Goods to Receive&#8217;) is debited.
+Also only for Stockable Products and under the Anglo Saxon system AND when Perpetual accounting is used, the expense account is debited for the costs of the goods when confirming a sales invoice so for these products the expense account should be the &#8216;Cost of Goods Sold&#8217; account.</dd>
+<dt id="term-fiscal-position">fiscal position</dt>
+<dd>The applicable tax rates (like VAT) for buying and selling are set on the product. However, for some partners other rates might apply (for example if they are abroad). A fiscal position is a set of rules that specify how to override taxes set on the product. Once defined, a fiscal position is set on the partner which will then serve as the default fiscal position on purchase or sales orders involving this partner.</dd>
+<dt id="term-income-account">income account</dt>
+<dd>A <a class="reference internal" href="#term-property-field"><em class="xref std std-term">property field</em></a> that can be set both on the product and the product category.
+This account is credited when a customer invoice for this product is confirmed at the sales price of the invoice. It should therefore point to a revenue financial account like &#8216;Sales&#8217;. If not set the default credit account of the journal is used when creating a customer invoice. The field must have been set, however, to be able to create an invoice from the sales order.</dd>
+<dt id="term-inventory-valuation-method">inventory valuation method</dt>
+<dd>Set on the product category form, this field determines whether the system makes automatic journal entries for stock moves or not.
+If it is set to &#8216;Periodic (manual)&#8217; no automatic journal entries are made. Instead, the accountant should make manual entries at the end of each period to properly reflect the value of goods in stock.
+If set to &#8216;Perpetual (automatic)&#8217; the system will make automatic journal entries as follows. Whenever goods are moved into stock, the <a class="reference internal" href="#term-stock-valuation-account"><em class="xref std std-term">Stock Valuation Account</em></a> is debited for the value of the goods calculated using the cost price on the product (which in turn is determined by the <a class="reference internal" href="#term-costing-method"><em class="xref std std-term">costing method</em></a> in force for the product). The <a class="reference internal" href="#term-stock-input-account"><em class="xref std std-term">Stock Input Account</em></a> is credited for the same value.</dd>
+<dt id="term-invoicing-policy">invoicing policy</dt>
+<dd><p class="first">The invoicing policy determines when the invoice from the sales order can be generated. It is set on the product.
+There are 2 options:</p>
+<ol class="last arabic simple">
+<li>On ordered quantities: the invoice is based on the quantities the customer ordered.</li>
+<li>On delivered quantities: the invoice is based on the quanties the vendor delivered (time or deliveries).</li>
+</ol>
+</dd>
+<dt id="term-kit">kit</dt>
+<dd>A kit is a product that represents a set of components that are delivered without being first assembled or mixed (so their is no actual manufacturing operation performed). For a product to be a kit, it must have Kit <a class="reference internal" href="#term-bill-of-materials"><em class="xref std std-term">bill of materials</em></a> of type &#8216;Ship this product as a set of components (kit)&#8217;.</dd>
+<dt id="term-manufacturing-order">manufacturing order</dt>
+<dd>An <a class="reference internal" href="#term-object"><em class="xref std std-term">object</em></a> that represents an instruction to to produce a number of products using a specific bill of material with a start deadline. The manufacturing order contains prepopulated stock move lines (calculated on the basis of the bill of materials) to bring in the needed materials from stock and move the finished proucts to stock. Starting production moves the materials to the <a class="reference internal" href="#term-stock-location"><em class="xref std std-term">stock location</em></a> production while finishing the order moves the finished product into stock.</dd>
+<dt id="term-manufacturing-lead-time">manufacturing lead time</dt>
+<dd>This is time is set on the product and signifies the average time it takes to produce the product provided that all the components and subassemblies of its <a class="reference internal" href="#term-bill-of-materials"><em class="xref std std-term">bill of materials</em></a> are available.</dd>
+<dt id="term-model">model</dt>
+<dd>see <a class="reference internal" href="#term-object"><em class="xref std std-term">object</em></a></dd>
+<dt id="term-module">module</dt>
+<dd>A unit of functionality in the system. Odoo is a very modular system meaning that it has only very basic core functionality while you add the functionality required by adding modules. Modules contain programming code, view and report definitions and other data.</dd>
+<dt id="term-object">object</dt>
+<dd>An object is a container of data and logic to manipulate the data. It represents a thing, a process, event, transaction or rule important to keep track of to support the business processes or internally for the management of the information system itself. Examples are products, work-flows, sales orders, purchase orders, payment, users, security rules etc. The term object can sometimes refer to the object class (e.g. the concept &#8216;Purchase Order&#8217;) or a particular instance of that object class (eg. PO0019 to supplier &#8216;InfoTech&#8217;) . In Odoo the object class is mostly referred to as &#8216;model&#8217; but sometimes just as &#8216;object&#8217; while a particular instance is referred to as &#8216;resource&#8217; or &#8216;record&#8217;. A &#8216;model&#8217; consists of &#8216;fields&#8217; which are attributes of the object we want to keep track of and &#8216;methods&#8217; which consist of logic to manipulate the values of those fields. In database terms, loosely, an object would be represented by a table and an object instance by a record or row in the table, a field would be a column of the table and the value of the field the intersections of the column and the row. The models are defined in the programming code of the Odoo modules while the resources are represented in the database.</dd>
+<dt id="term-partner">partner</dt>
+<dd>A company or person the company has relations with. Can be a client, supplier, government agency, employee etc. If a partner is a company it can have &#8216;children&#8217;. The children cannot be companies but must be contacts or addresses of the company.</dd>
+<dt id="term-picking">picking</dt>
+<dd>see <a class="reference internal" href="#term-transfer"><em class="xref std std-term">transfer</em></a></dd>
+<dt id="term-price-difference-account">price difference account</dt>
+<dd>A <a class="reference internal" href="#term-property-field"><em class="xref std std-term">property field</em></a> that can be set both on the product and the product category. It is used when the <a class="reference internal" href="#term-anglo-saxon-accounting"><em class="xref std std-term">anglo saxon accounting</em></a> system is adopted, only for stockable products with the <a class="reference internal" href="#term-inventory-valuation-method"><em class="xref std std-term">inventory valuation method</em></a> set to &#8216;Perpetual (automatic)&#8217;. The account will automatically record differences between the invoiced purchase price and the cost price as recorded on the product form when confirming the vendor bill. It is only used under anglo saxon system since costs of stockable products are under that only recognized when selling these products but costs due to variations in prices can so be recognized immediately. In the continental system this is alreay built in as costs are already recognized when purchasing goods. It can be relevant even when costing method is &#8216;average&#8217; when there is a discrepancy between the invoice costs and the purchase order costs since stock valuation is done according to the purchase order prices and not the invoice prices.</dd>
+<dt id="term-price-list">price list</dt>
+<dd>A set of rules to determine the sales price or purchase prices on sales order lines or purchase order lines depending on whether its type is &#8216;sale&#8217; or &#8216;purchase&#8217;. A price list has one currency and is associated with one or more price list versions of which one can only be applicable at any time (as determined by the start and end date). Each price list version has a set of price list items which are the actual rules to calculate the prices.</dd>
+<dt id="term-procurement">procurement</dt>
+<dd>A procurement is an internal object that holds data about when a certain quantity of a product is needed at what location. Based on procurements the system can generate purchasing orders, manufacturing orders, stock moves to fulfill the needs. The procurement also links to documents generated to fulfill the need.</dd>
+<dt id="term-project">project</dt>
+<dd>A project is a set of tasks. A project is generated from a confirmed sales order.</dd>
+<dt id="term-product-template">product template</dt>
+<dd>The product template is an object describing the common attributes of a certain type of product. A product template resource can be linked to one or more product variant resources that share the values for the common attributes of the template resource but have different values for variant attributes. For a product template to have more than one variant there must also be at least one user defined attribute. The user defined attributes are usually concepts like color, size and so on. Each variant belonging to the same template will then have a different values for the user defined attributes.</dd>
+<dt id="term-product-type">product type</dt>
+<dd><p class="first">Odoo distinguishes between three product types, set on the product form:</p>
+<ol class="last arabic simple">
+<li>Stockable product: normal physical product that can be stocked.</li>
+<li>Consumable: only relevant in a production oriented enterprise. The system assumes there is always enough stock of this product. In other words it will always  flag stock moves of this product as &#8216;available&#8217;. There is also no automatic inventory accounting for consumables. Sellable products should not have the consumable product type.</li>
+<li>Service: a product that is not physical. You cannot keep stock of a service and it cannot appear in stock moves. Services can be bought and sold or produced by the company.</li>
+</ol>
+</dd>
+<dt id="term-product-variant">product variant</dt>
+<dd>See <a class="reference internal" href="#term-product-template"><em class="xref std std-term">product template</em></a></dd>
+<dt id="term-property-field">property field</dt>
+<dd><p class="first">A special type of field also called &#8216;configuration parameter or company specific field&#8217;. Can be set in the view of a particular resource (like the product form view) or at Settings→Technical→Parameters→Configuration Parameters.
+The purpose of a property field is twofold:</p>
+<ol class="arabic simple">
+<li>The property can have a different value for each company in the system. Depending on which company the user is logged in as, the property field of the same resource has or can have a different value. This allows you to share resources between companies but still let the property fields differ.</li>
+<li>Allows setting different levels of defaults for fields. If the property field for a particular resource is not set the system will then check if there is a &#8216;Generic&#8217; value for the company the user is logged in for that field which is not bound to a paricular resource. If that is not found as well the system will check there is a &#8216;Generic&#8217; value for the property field for the system as a whole which is also not bound to a company. &#8216;Generic&#8217; properties can only be set in the Settings module (Settings→Technical→Parameters→Company properties).</li>
+</ol>
+<p class="last">Note that you should never set &#8216;Generic&#8217; values for the product level property fields that have corresponding product category property fields as this will result in the product category properties being ignored.</p>
+</dd>
+<dt id="term-pull-rule">pull rule</dt>
+<dd>A pull rule or procurement rule is rule that specfies how a <a class="reference internal" href="#term-procurement"><em class="xref std std-term">procurement</em></a> at a certain location should be fulfilled. There are three ways: &#8216;buy&#8217; (generate purchase order), &#8216;manufacture&#8217; (generate manufacturing order), or &#8216;move from another location&#8217; (generate stock move) from another location to this location.</dd>
+<dt id="term-push-rule">push rule</dt>
+<dd>A push rule is a rule that specifies that when a products arrives at a certain <a class="reference internal" href="#term-stock-location"><em class="xref std std-term">stock location</em></a> a new <a class="reference internal" href="#term-transfer"><em class="xref std std-term">transfer</em></a> should be prepared automatically to another location. For example if a company has a test location for incoming goods you could specify that all products arriving at the &#8220;Input&#8221; location for the company should have a transfer prepared to the &#8220;test&#8221; location and all products to the &#8220;test&#8221; location should have a transfer prepared to the &#8220;stock&#8221; location for the default case that products are tested OK. The advantage is that operator can simply validate the prepared transfer instead of having to enter all data herself.</dd>
+<dt id="term-python">Python</dt>
+<dd>A popular, general-purpose, high-level, cross-platform, interpreted programming language whose philosophy focuses mainly on code readability and maintainability. Designed by a Dutch guy: Guido van Rossum.</dd>
+<dt id="term-record">record</dt>
+<dd>see <a class="reference internal" href="#term-object"><em class="xref std std-term">object</em></a></dd>
+<dt id="term-reordering-rule">reordering rule</dt>
+<dd>A reordering rule, when set on a product, determines if the system should create a new <a class="reference internal" href="#term-procurement"><em class="xref std std-term">procurement</em></a> to replenish stock levels of that product on a a certain <a class="reference internal" href="#term-object"><em class="xref std std-term">stock location&#8217; when the &#8216;Run Reordering Rules&#8217; :term:`method</em></a> is run.</dd>
+<dt id="term-resource">resource</dt>
+<dd>see <a class="reference internal" href="#term-object"><em class="xref std std-term">object</em></a></dd>
+<dt id="term-route">route</dt>
+<dd><p class="first">A route is a defined path goods take through the system determined by <a class="reference internal" href="#term-push-rule"><em class="xref std std-term">Push Rules</em></a> and/or <a class="reference internal" href="#term-pull-rule"><em class="xref std std-term">Pull Rules</em></a>. Routes are configured under Warehouse→Configuration→Routes (when advanced routing is ON). Several are predefined by the modules installed like &#8216;Buy&#8217; (purchase module - a draft purchase order is generated), &#8216;Make to Order&#8217; (stock module - a procurement is created irrespective of stock level), &#8216;Drop Shipping&#8217; (dropship module - defines a route from vendor to customer directly), &#8216;Ship Only&#8217; (is make-to-stock, goods are taken from stock while no procurement is generated - the procurements are generated when running the Run Reorder Rules wizard). Routes can be applicable to <a class="reference internal" href="#term-warehouse"><em class="xref std std-term">Warehouses</em></a>, Individual Products, Product Categories, or Sale order lines. In effect it determines the <a class="reference internal" href="#term-stock-move"><em class="xref std std-term">stock moves</em></a> and <a class="reference internal" href="#term-transfer"><em class="xref std std-term">transfers</em></a> that are generated by the system when fulfilling a procurement. The system chooses a route and selects an procurement rule from the route when processing a procurement that has no procurement rule yet. It will select the rule matching the procurement location with the highest route sequence and then with the highest rule sequence in the following order of precedence:</p>
+<ol class="last arabic simple">
+<li>From the route ids on the procurement (if explicitly set by user)</li>
+<li>From the products and product categories to which products belongs</li>
+<li>From the warehouse to which procurement belongs</li>
+<li>From global procurement rules (those that have no route specified)</li>
+</ol>
+</dd>
+<dt id="term-46">resource</dt>
+<dd>see <a class="reference internal" href="#term-object"><em class="xref std std-term">object</em></a></dd>
+<dt id="term-scheduled-actions">scheduled actions</dt>
+<dd>Accessible under Settings→Technical→Automation/Scheduled Actions when the <a class="reference internal" href="#term-developer-mode"><em class="xref std std-term">developer mode</em></a> has been activated. It schedules triggering certain methods of <a class="reference internal" href="#term-object"><em class="xref std std-term">objects</em></a> at regular intervals.</dd>
+<dt id="term-stock-input-account">stock input account</dt>
+<dd>Set on the product category in a <a class="reference internal" href="#term-property-field"><em class="xref std std-term">property field</em></a>, this account is credited for the corresponding value when goods are entered into stock and the <a class="reference internal" href="#term-inventory-valuation-method"><em class="xref std std-term">inventory valuation method</em></a> on the product category has been set to &#8216;Perpetual (automated)&#8217;. The value is calculated as the mathematical product of the quantity moved into stock and the cost price on the product form. Under <a class="reference internal" href="#term-anglo-saxon-accounting"><em class="xref std std-term">anglo saxon accounting</em></a>, when confirming a vendor bill and for stockable products this account is debited  instead of the <a class="reference internal" href="#term-expense-account"><em class="xref std std-term">expense account</em></a> as counterpart for accounts payable (irrespective of inventory valuation method).</dd>
+<dt id="term-stock-location">stock location</dt>
+<dd><p class="first">A stock location can act as the source or destination of a term:<cite>stock move</cite>. It hold data used in accounting and logistics. A location has a stock level for each good calculated by the difference between outgoing and incoming stock moves. Stock locations can be grouped and put in hierarchies. Every company has at least one group of such locations: the <a class="reference internal" href="#term-warehouse"><em class="xref std std-term">warehouse</em></a>.
+It can be of different types:</p>
+<ul class="last simple">
+<li>Internal: a real physical location in the company where goods are stored</li>
+<li>Customer: a &#8216;sink&#8217; to where sold products go to</li>
+<li>Vendor: a &#8216;source&#8217; from which purchased products come</li>
+<li>Transit: a location for administrative use that acts as a buffer between own companies</li>
+<li>Inventory Loss: a &#8216;virtual&#8217; location that acts as the destination for lost goods.</li>
+<li>Production: a &#8216;virtual&#8217; location that acts as the destination for components and raw materials and the source for finished goods or sub-assemblies.</li>
+</ul>
+</dd>
+<dt id="term-stock-output-account">stock output account</dt>
+<dd>Set on the product category in a <a class="reference internal" href="#term-property-field"><em class="xref std std-term">property field</em></a>, this account is debited for the corresponding value when goods are moved out of stock and the <a class="reference internal" href="#term-inventory-valuation-method"><em class="xref std std-term">inventory valuation method</em></a> on the product category has been set to &#8216;Perpetual (automated)&#8217;. The value is calculated as the mathematical product of the quantity moved out of stock and the cost price on the product form.  Under <a class="reference internal" href="#term-anglo-saxon-accounting"><em class="xref std std-term">anglo saxon accounting</em></a>, when confirming a sales invoice, for stockable products and when the <a class="reference internal" href="#term-inventory-valuation-method"><em class="xref std std-term">inventory valuation method</em></a> is set to &#8216;Perpetual (automatic)&#8217; this account is automatically credited (and the <a class="reference internal" href="#term-expense-account"><em class="xref std std-term">expense account</em></a> Costs of Goods Sold is debited) so the account should point to &#8216;Deliveries&#8217;.</dd>
+<dt id="term-stock-move">stock move</dt>
+<dd>A stock move is an term:<cite>object</cite> that holds captures data about the physical movement of a good. Based on &#8216;confirmed&#8217; or &#8216;validated&#8217; stock moves the future or current stock level is calculated at a particular term:<cite>stock location</cite></dd>
+<dt id="term-stock-valuation-account">stock valuation account</dt>
+<dd>Set on the product category in a <a class="reference internal" href="#term-property-field"><em class="xref std std-term">property field</em></a>, this account is debited for the corresponding value when goods are moved into stock and the <a class="reference internal" href="#term-inventory-valuation-method"><em class="xref std std-term">inventory valuation method</em></a> on the product category has been set to &#8216;Perpetual (automated)&#8217; and credited when goods are moved out of stock. The stock valuation account thus reflects the value of goods in stock.</dd>
+<dt id="term-task">task</dt>
+<dd>A task is an assignment within a project. A task is assigned to one person. A task can go through various stages.</dd>
+<dt id="term-tax">tax</dt>
+<dd>In Odoo you can define taxes that applicable to buying and selling (usually VAT taxes). Once defined the system will calculate the taxes on a purchase (order) or on a sale (order), and will automatically make the tax entries in the ledger and or accumulate the taxes for tax reporting purposes.</dd>
+<dt id="term-toggle-button">toggle button</dt>
+<dd>A button that can be in two states &#8216;on&#8217; and &#8216;off&#8217;. &#8216;On&#8217; or &#8216;active&#8217; is represented by a button that is in a pressed down state and is darker shade. &#8216;Off&#8217; or &#8216;inactive&#8217; is represented by showing the button in released state and lighter shade. The toggle button is used in search views to search on boolean fields that can have a True or False value. Like for example the &#8216;Is Customer?&#8217; field.</dd>
+<dt id="term-transfer">transfer</dt>
+<dd><p class="first">A transfer is a group of term:<cite>stock moves &lt;stock move&gt;</cite> with the same source and destination location and that are processed at the same time. A transfer can be in different states depending on the state of the stock move:</p>
+<ul class="simple">
+<li>draft: all stock moves are in draft state so there is no influence on stock levels.</li>
+<li>waiting availability: all the goods are not available at the source location so transfer cannot be &#8216;validated&#8217;.</li>
+<li>partially available: some of the goods are not available at the source location some are. The transfer can only be validated for a part of the goods for the other part a <a class="reference internal" href="#term-back-order"><em class="xref std std-term">back order</em></a> will be created.</li>
+<li>available: all goods are available at the source location. The transfer can be validated in full.</li>
+<li>done: the transfer has been &#8216;validated&#8217; so the current stock level at the source location has fallen while the stock levels at the destination location.</li>
+</ul>
+<p>Transfers are named differently according to role:</p>
+<ul class="last simple">
+<li>Receipts: transfers from suppliers to the company. They are always available as availability is not something within company&#8217;s control. They are validated the moment the goods arrive at company. Receipts are generated and associated with a purchase order.</li>
+<li>Deliveries: transfers from company to customer. Generated and associated with a sales order.</li>
+<li>Internal: transfers between <a class="reference internal" href="#term-stock-location"><em class="xref std std-term">stock locations</em></a> inside the company.</li>
+<li>Manufacturing: transfers generated and associated with a manufacturing order: from stock to the production location for components and raw materials and from production to stock for finished products (or sub-assemblies).</li>
+</ul>
+</dd>
+<dt id="term-unit-of-measure">unit of measure</dt>
+<dd>The standard of measure (UoM) in which the quantity of a product is expressed. The unit of measure belongs to a category. Quantities expressed in one UoM can also be expressed in another UoM as long as both these UoMs belong to the same category. If both UoMs are not of the same type the system will raise an error if such conversion is attempted. Each UoM type has one &#8216;reference&#8217; UoM. The other UoMs of the same type must carry a factor relative to the reference UoM, so UoMs can be converted.</dd>
+<dt id="term-view">view</dt>
+<dd><p class="first">A type of screen used to present data to the user, or more precisely to present (the resources of) an object to the user. These are different types of views:</p>
+<ul class="simple">
+<li>list or search view: data is presented in rows, with one record per row</li>
+<li>form view: data is presented as form with one record per screen or window. The form view can contain list or form views of related records</li>
+<li>graph view: data is presented in a graph</li>
+<li>dashboard view: a combination of list, form and graph views. In the web client often activated as first view when activating the module. In the GTK client the dashboard is usually available under the reporting menu item.</li>
+<li>gantt view: data is presented in the form a gantt chart, that is bars on a calendar. Useful if the object has a duration.</li>
+<li>calendar view: data is presented on a calendar type (only useful if there is a date field in the records to display)</li>
+<li>kan ban view: data is presented as if on a black board</li>
+<li>diagram view: data is presented in a diagram also allowing editing of diagram (adding edges and nodes). Only applicable to presenting or editing workflows and only availabe in the web client (under Administration→Customization→Workflows).</li>
+</ul>
+<p class="last">The object or objects to display must support the views before you can use them. List and form views are always supported.</p>
+</dd>
+<dt id="term-warehouse">warehouse</dt>
+<dd>A warehouse is a top level group of <a class="reference internal" href="#term-stock-location"><em class="xref std std-term">stock locations</em></a> associated with a company consisting of an &#8216;input&#8217;, &#8216;stock&#8217; and &#8216;output&#8217; location. The company stock level is calculated from the goods in stock location.</dd>
+<dt id="term-wizard">wizard</dt>
+<dd>A feature of a software package that automates complex tasks by asking the user a series of easy-to-answer questions.</dd>
+</dl>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Introduction</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/glossary.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             >previous</a> |</li>
+        <li><a href="index.html">XXX ERP 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2019, Jeroen Vet.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

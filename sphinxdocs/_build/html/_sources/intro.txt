@@ -1,0 +1,34 @@
+************
+Introduction
+************
+
+.. contents:: Table of Contents
+
+Odoo
+====
+
+XXX's :abbr:`ERP (Enterprise Resource Planning)` system has been implemented in the Enterprise edition of Odoo version 12, a state-of-the-art, open source software system that can support most of a company's business processes out-of-the-box and allows for relatively easy modification and development of features specific to a certain company, so-called 'customizations'. An ERP system is comprehensive as the very idea of such a system is to support and capture data from all of a company's operational business processes in an integrated manner. The more processes are supported the more valuable the system becomes as the information model of the company will be richer allowing for tighter integration and more sophisticated data analysis that can support better decision making. 
+
+Comprehensiveness inevitably means a certain degree of complexity. The user is encouraged to learn more about Odoo by consulting the Odoo documentation available at https://www.odoo.com/documentation/user/12.0/. This site can also be reached from the `Odoo Docs` menu item in the dropdown menu under the user name. Technical information can be found at https://www.odoo.com/documentation/12.0/.
+
+XXX System Overview
+===================
+
+Currently the XXX system supports the following main processes:
+
+#. Sales
+#. Purchasing
+#. Manufacturing
+#. Stock and Logistics
+#. Accounting
+#. Human Resources Management
+#. Project Management
+
+The main functionalities are implemented with :term:`applications <application>`. More functionality is added by means of :term:`modules <module>` that augment these applications. You can see the applications that you have access to in the main menu screen. If you are member of the 'Administration / Settings' group you will have access to the "Apps" menu item and you can see a list of all apps and modules installed (apply the 'Installed' filter).
+
+A number of custom modules have been installed to adapt and extend the functionality of the Odoo standard modules. Some specifically designed for XXX (i.e. the modules 'kei', 'kei_docs' and 'kei_qms') and some by other third party authors. You can group by Author in the modules list to get an idea of the custom functionality installed.
+
+The Odoo concepts that are used in this documentation are explained in the :ref:`glossary`. 
+
+    
+
